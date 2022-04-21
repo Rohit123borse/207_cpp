@@ -1,32 +1,37 @@
+//program demonstate parameter passing technique (call by value)
 #include<iostream.h>
 #include<conio.h>
-
-class swap
-{
-	int  a,b,temp;
-	public:
-	void get();
-	void show();
-};
-
-void swap::get()
-{
-	cout<<"enter the two numbers";
-	cin>>b;
-}
-void swap::show()
-{
-	temp=a;
-	a=b;
-	b=temp;
-	cout<<"after swapping"<<a<<"b =  ";
-}
+void swap(int a,int b);
 void main()
 {
+	int a,b;
 	clrscr();
-	swap s;
-	s.get();
-	s.show();
+	cout<<"Enter A:";
+	cin>>a;
+	cout<<"Enter B:";
+	cin>>b;
+	cout<<"before Swapping"<<endl;
+	cout<<a<<"\t"<<b<<endl;
+	swap(a,b);
+
 	getch();
 }
+void swap(int x, int y)
+{
+	int t;
+	t=x;
+	x=y;
+	y=t;
+	cout<<"After swapping"<<endl;
+	cout<<x<<"\t"<<y<<endl;
+
+}
+
+
+
+
+
+
+
+
 
